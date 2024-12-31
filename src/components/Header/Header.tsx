@@ -7,9 +7,11 @@ const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 3em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: fixed;
+  background-color: #fff;
 `;
 
 const StyledContainer = styled.div`

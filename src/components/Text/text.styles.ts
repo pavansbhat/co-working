@@ -16,6 +16,14 @@ export const StyledPageheadingText = styled.p<{ fontSize: string }>`
   font-weight: 700;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0 50px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin: 0 10px;
+  }
 `;
 
 export const StyledSectionHeadingText = styled.p<{ fontSize: string }>`
@@ -26,6 +34,11 @@ export const StyledSectionHeadingText = styled.p<{ fontSize: string }>`
   font-weight: 700;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0 50px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    width: 100%;
+    margin: 0 10px;
+  }
 `;
 
 export const StyledColoredText = styled.p<{ color?: string }>`
