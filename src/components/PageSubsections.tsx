@@ -5,13 +5,14 @@ const StyledPageContainer = styled.div<{
   bgImage?: string;
   width: string;
   fgImage?: string;
+  height?: string;
 }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: ${(props) => (props.width ? `${props.width}` : "100%")};
-  height: 300px;
+  height: ${(props) => (props.height ? `${props.height}` : "300px")};
   background-image: ${(props) =>
     props.bgImage && props.fgImage
       ? `url(${props.fgImage})`
@@ -31,15 +32,22 @@ export const PageSubsections = ({
   bgImage,
   fgImage,
   width,
+  height,
   children,
 }: {
   bgImage?: string;
   width: string;
   fgImage?: string;
+  height?: string;
   children?: ReactNode;
 }) => {
   return (
-    <StyledPageContainer bgImage={bgImage} fgImage={fgImage} width={width}>
+    <StyledPageContainer
+      bgImage={bgImage}
+      fgImage={fgImage}
+      width={width}
+      height={height}
+    >
       {children}
     </StyledPageContainer>
   );

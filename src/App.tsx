@@ -15,7 +15,6 @@ import { facilities } from "./bhive.constants.ts";
 import { useWorkspaces } from "./components/query.ts";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import WorkspaceList from "./WorkspaceList";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +32,6 @@ const StyledSection = styled.div`
   }
 `;
 function App() {
-  const { data, isLoading, isError, error } = useWorkspaces();
   return (
     <QueryClientProvider client={queryClient}>
       <div>
@@ -50,7 +48,11 @@ function App() {
         <div>
           <StyledContainer>
             <StyledSection>
-              <PageSubsections bgImage={backgroundImage} width={"65%"}>
+              <PageSubsections
+                bgImage={backgroundImage}
+                width={"65%"}
+                height={"754px"}
+              >
                 <CustomText
                   variant={TextTypes.PAGE_HEADING}
                   fontSize={"36px"}
@@ -65,6 +67,7 @@ function App() {
                 bgImage={bgImage}
                 fgImage={coworking}
                 width={"35%"}
+                height={"743px"}
               />
             </StyledSection>
             <div
@@ -89,6 +92,22 @@ function App() {
               <div style={{ flex: "1" }}></div>
             </StyledSection>
           </StyledContainer>
+          <CustomText
+            variant={TextTypes.SECTION_HEADING}
+            fontSize={"24px"}
+            content={"Why choose us?"}
+          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              margin: "0 50px",
+            }}
+          >
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
       </div>
       <ReactQueryDevtools initialIsOpen={false} />

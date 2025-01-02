@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import ky from "ky";
-import { WorkspacesSchema, type Workspaces } from "../index";
+import { WorkspacesSchema, type Workspaces } from "../index.d.ts";
 
 const fetchWorkspaces = async (): Promise<Workspaces> => {
   const response = await ky
@@ -8,8 +8,14 @@ const fetchWorkspaces = async (): Promise<Workspaces> => {
       "https://raw.githubusercontent.com/MujtabaKably/bhive-interview-project-data/main/data.json",
     )
     .json();
-
-  return WorkspacesSchema.parse(response);
+  console.log("Response:", response); // Debugging
+  try {
+    return WorkspacesSchema.parse(response);
+  } catch (error) {
+    console.error("Zod Validation Error:", error);
+    console.log("Response Data:", response);
+    throw error; // Rethrow to be caught by React Query
+  }
 };
 
 export const useWorkspaces = () => {
