@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const StyledTextContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin: 50px 0;
   width: 100%;
 `;
 

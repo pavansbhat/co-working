@@ -76,7 +76,7 @@ function App() {
                 flexDirection: "row",
                 justifyContent: "flex-start",
                 alignContent: "center",
-                margin: "50px 0 0 0",
+                margin: "80px 0 0 0",
                 width: "65%",
               }}
             >
@@ -97,17 +97,17 @@ function App() {
             fontSize={"24px"}
             content={"Why choose us?"}
           />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              margin: "0 50px",
-            }}
-          >
-            <Card />
-            <Card />
-            <Card />
-          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            // margin: "0 0 0 50px",
+          }}
+        >
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
       <ReactQueryDevtools initialIsOpen={false} />

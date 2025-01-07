@@ -5,7 +5,7 @@ export const StyledFacilitiesSection = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-row: auto;
   justify-items: center;
-  position: relative;
+  position: static;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

@@ -22,12 +22,13 @@ export const StyledCardContainer = styled.div<{
 `;
 
 export const StyledCardSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: auto;
+  justify-items: center;
+  position: static;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  //@media (max-width: 768px) {
+  //  grid: column;
+  //}
 `;
