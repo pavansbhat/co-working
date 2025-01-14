@@ -121,7 +121,7 @@ function App() {
                   fontSize={"2em"}
                   content={"Download our app now"}
               />
-              {/*<Footer />*/}
+              <Footer />
           </div>
 
       </>
