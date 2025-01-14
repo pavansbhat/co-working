@@ -1,5 +1,6 @@
 import { TextTypes } from "./text.types.ts";
 import {
+  StyledCardHeadingText,
   StyledColoredText,
   StyledPageheadingText,
   StyledSectionHeadingText,
@@ -43,5 +44,13 @@ export const CustomText = ({
           </StyledSectionHeadingText>
         </StyledTextContainer>
       );
+      break;
+
+    case TextTypes.CARD_HEADING: 
+      return(
+            <StyledCardHeadingText fontSize={fontSize}>
+              {content}
+            </StyledCardHeadingText>
+      )
   }
 };

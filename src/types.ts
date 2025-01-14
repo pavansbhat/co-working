@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 // Define the Zod schema
-const WorkspaceSchema = z.object({
+export const WorkspaceSchema = z.object({
   id: z.string(),
   name: z.string(),
   address: z.string(),
@@ -34,3 +34,4 @@ const WorkspaceSchema = z.object({
 
 export const WorkspacesSchema = z.array(WorkspaceSchema);
 export type Workspaces = z.infer<typeof WorkspacesSchema>;
+export type Workspace = z.infer<typeof WorkspaceSchema>

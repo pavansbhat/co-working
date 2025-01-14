@@ -6,6 +6,7 @@ const StyledPageContainer = styled.div<{
   width: string;
   fgImage?: string;
   height?: string;
+  margin?:string;
 }>`
   display: flex;
   flex-direction: row;
@@ -23,32 +24,47 @@ const StyledPageContainer = styled.div<{
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   border-radius: 10px;
+  margin: ${(props) => (props.margin ? `${props.margin}` : "2em")};
   @media (max-width: 720px) {
     width: 100%;
   }
 `;
+
+export const StyledPageSectionContainer = styled.div<{
+  width: string;
+  height?: string;
+}>`
+  width: ${(props) => (props.width ? `${props.width}` : "100%")};
+  height: ${(props) => (props.height ? `${props.height}` : "300px")};
+`
 
 export const PageSubsections = ({
   bgImage,
   fgImage,
   width,
   height,
+    margin,
   children,
 }: {
   bgImage?: string;
   width: string;
   fgImage?: string;
   height?: string;
+  margin?: string,
   children?: ReactNode;
 }) => {
   return (
-    <StyledPageContainer
-      bgImage={bgImage}
-      fgImage={fgImage}
-      width={width}
-      height={height}
-    >
-      {children}
-    </StyledPageContainer>
+      // <StyledPageSectionContainer width={width} height={height}>
+        <StyledPageContainer
+            bgImage={bgImage}
+            fgImage={fgImage}
+            width={width}
+            height={height}
+            margin={margin}
+        >
+          {children}
+        </StyledPageContainer>
+      // </StyledPageSectionContainer>
+    
   );
 };

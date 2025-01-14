@@ -8,10 +8,11 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 3em;
+  height: 5em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: fixed;
   background-color: #fff;
+    z-index: 1000;
 `;
 
 const StyledContainer = styled.div`
@@ -23,7 +24,6 @@ const StyledContainer = styled.div`
 `;
 
 const StyledLogo = styled.img`
-  height: 20px;
   padding: 5px;
   margin: 5px;
 `;

@@ -9,6 +9,8 @@ export const StyledFacilitiesSection = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 1.2em;
+    width: 100%;
     position: static;
   }
 `;
@@ -37,11 +39,11 @@ export const StyledFacilitiesContainer = styled.div<{
 
   background: #f9faff;
   @media (max-width: 768px) {
-    width: 154px;
-    height: 80px;
+    width: 90%;
+    //height: 80px;
     justify-content: center;
     z-index: 0;
-    margin: 10px 0;
+    //margin: 10px 0;
   }
 
   &:hover {
@@ -77,7 +79,7 @@ export const StyledTextSection = styled.div`
 `;
 
 export const StyledText = styled.h5`
-  font-size: 14px;
+  font-size: 1.5em;
   font-weight: 600;
   color: #000;
   margin: 0 0px 0 10px;
@@ -87,7 +89,7 @@ export const StyledText = styled.h5`
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 1.5em;
     margin: 0;
   }
 `;
@@ -105,7 +107,7 @@ export const StyledText = styled.h5`
 // `;
 
 export const StyledDescription = styled.p<{ hovered?: string | null }>`
-  font-size: 8px;
+  font-size: 0.8em;
   margin: 0px 0px 0 10px;
   color: #000;
   opacity: ${({ hovered }) => (hovered !== null ? 1 : 0)};
